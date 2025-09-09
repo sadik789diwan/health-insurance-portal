@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/health-insurance-portal-1.0.0.jar app.jar
 
 # Expose port
-EXPOSE 8080
+EXPOSE 8082
 
 # Run app
 ENTRYPOINT ["java", "-jar", "app.jar"]
