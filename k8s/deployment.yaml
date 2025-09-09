@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: health-insurance-portal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: health-insurance-portal
+  template:
+    metadata:
+      labels:
+        app: health-insurance-portal
+    spec:
+      containers:
+        - name: health-insurance-portal
+          image: health-insurance-portal:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
