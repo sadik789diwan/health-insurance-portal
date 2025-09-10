@@ -14,4 +14,13 @@ public class GreetingController {
     public String greet(@RequestParam(defaultValue = "world") String name){
         return "Hello, "+ name +"!";
     }
+   /* @GetMapping("/users/{id}")
+    public EntityModel<User> getUser(@PathVariable Long id) {
+        User user = findUserById(id);
+        EntityModel<User> resource = EntityModel.of(user);
+        resource.add(linkTo(methodOn(GreetingController.class).getUser(id)).withSelfRel());
+        resource.add(linkTo(methodOn(GreetingController.class).getAllUsers()).withRel("all-users"));
+        return resource;
+    }*/
+
 }

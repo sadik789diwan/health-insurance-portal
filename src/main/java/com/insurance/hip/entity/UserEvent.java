@@ -1,0 +1,16 @@
+package com.insurance.hip.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class UserEvent {
+    private String id;
+    private String name;
+    private String action;
+
+    // getters & setters
+}
