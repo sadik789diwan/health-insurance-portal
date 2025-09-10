@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
 public class MyThreadScheduler {
     private final ExecutorService executorService= Executors.newFixedThreadPool(100);
 
-    @Scheduled(cron = "0 */5 * * * *")    //Every 5 minutes
+    @Scheduled(cron = "0 */55 * * * *")    //Every 5 minutes
     public void runThreadEveryFiveMinutes(){
         System.out.println("Starting 100 threads at: "+ java.time.LocalDateTime.now());
         for(int i=1; i<=100; i++){
